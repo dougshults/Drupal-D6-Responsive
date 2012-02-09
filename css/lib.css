@@ -1,0 +1,138 @@
+/* DRUPAL CORE & MODULE OVERRIDES
+---------------------------- */
+
+/* @group ADMIN MENU */
+
+/* The admin menu is both too small and too light */
+#admin-menu { font-size: 10px; }
+#admin-menu li li { opacity: 1; } 
+
+/* @end ADMIN MENU */
+
+/* General
+---------------------------- */
+
+a img { border: 0px }
+
+
+/* Rollover edit links for blocks
+----------------------------*/
+
+div.block {
+  position: relative;
+}
+div.block div.edit {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 40;
+  border: 1px solid #eee;
+  padding: 0 2px;
+  font-size: 11px;
+  background-color: #fff;
+}
+div.block:hover div.edit {
+  display: block;
+}
+
+/**
+ *
+ * ABOUT
+ *
+ * Style.css is the first custom stylesheet called in the CSS order (for the remaining stylesheets, see the .info file).
+ * Please place commonly used CSS snippets here. Otherwise, place design specific styles in css/main.css
+ */
+
+/**
+ * How To Clear Floats Without Structural Markup: 
+ * http://www.positioniseverything.net/easyclearing.html
+ * 
+ */
+
+.clearfix:after { /* Think about removing this, it has caused problems before */
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix { display: inline-block; }
+
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block;}
+
+/* clear classes for content */
+
+.clearleft { clear: left; }
+
+.clearright { clear: right; }
+
+.clearboth { clear: both; }
+
+/* "Skip to Main Content" link
+*
+* This link useful for both visually impaired people and those with mobility impairments
+* who cannot use a mouse.
+*/
+
+#skip-nav { display: none; }
+
+#skip-nav a, #skip-nav a:hover, #skip-nav a:visited {
+  position: absolute;
+  left: 0;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+#skip-nav a:active, #skip-nav a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/** Prevent overflowing content **/
+
+#header,
+#content,
+#sidebar-left,
+#sidebar-right,
+#footer {
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+/* bug fix with views 2 edit links */
+
+div.view div.views-admin-links{
+	width:auto;
+}
+
+
+/* Admin Styles (Bring to sep. style sheet) */
+
+.admin div.warning,
+.admin tr.warning,
+.admin div.error,
+.admin tr.error{
+	margin-bottom: 10px;
+}
+
+div.admin .left{
+	margin-left: 0px;
+}
+
+div.admin .right{
+	margin-right: 0px;
+}
+
+.admin dd{
+	margin-bottom:5px;
+	margin-left:0;
+	margin-top:0px;
+	padding-bottom:8px;
+	padding-left:10px;
+}

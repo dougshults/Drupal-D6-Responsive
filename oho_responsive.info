@@ -1,0 +1,54 @@
+; Info file for OHO Responsive Theme
+
+name = OHO Responsive
+description = A Base Theme for Mobile & Responsive Development
+core = 6.x
+engine = phptemplate
+
+; Features ::::::::::::::::::::
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; Regions ::::::::::::::
+
+regions[header]         = Header
+regions[page_top]       = Page, top
+regions[left]			= Sidebar, Left
+regions[content]        = Content
+regions[right]			= Sidebar, Right
+regions[page_bottom]    = Page, bottom
+regions[footer]         = Footer
+
+; regions[highlighted] = Highlighted
+; regions[ads] = Advertising Wall
+; regions[help] = Help
+
+; Styles ::::::::::::::  
+
+stylesheets[screen][] = css/lib.css
+stylesheets[screen][] = css/globals.css
+stylesheets[screen][] = css/typography.css
+stylesheets[screen][] = css/grid.css
+stylesheets[screen][] = css/ui.css
+stylesheets[screen][] = css/forms.css
+stylesheets[screen][] = css/orbit.css
+stylesheets[screen][] = css/reveal.css
+stylesheets[screen][] = css/ie.css
+; stylesheets[screen][] = css/main.css ** Add custom styles and style overides as the base theme develops **
+stylesheets[screen][] = css/mobile.css
+
+; Scripts ::::::::::::::
+
+scripts[] = js/jquery.min
+scripts[] = js/jquery.customforms.js
+scripts[] = js/jquery.orbit-1.4.0.js
+scripts[] = js/jquery.reveal.js
+scripts[] = js/jswipe.js
+scripts[] = js/swipe.js
